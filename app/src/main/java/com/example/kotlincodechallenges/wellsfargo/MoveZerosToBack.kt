@@ -5,7 +5,7 @@ fun main() {
     moveZerosToBackPls(intArrayOf(0,2,1,0,6,0,0,1,5,0,5,1234,6,9,0,9))
     moveZerosWithOutIndices(intArrayOf(0,2,1,0,6,0,0,1,5,0,5,1234,6,9,0,9))
     moveZerosWithOutIndices(intArrayOf(1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9))
-    pushZerosToEnd(intArrayOf(1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9))
+    pushZerosToEnd(intArrayOf(0, 9, 8, 4, 0, 0, 2, 7, 1, 6, 0, 9))
 }
 
 fun moveZerosToBackPls(array: IntArray) {
