@@ -29,19 +29,22 @@ fun main() {
 
         // look for the oldest Chevy -> should not be there
         findOldestOfType("Chevy")
+        findCoerce("Ford")
 
         // look for the oldest Ford-> should not be there
         findOldestOfType("Ford")
 
         // show all of a type of car
         showListOfMakes("Dodge")
+        findCoerce("Dodge")
 
     }
 }
 
 data class Car(
     val make: String,
-    val arrival: LocalDateTime
+    val arrival: LocalDateTime,
+    val milli: Long = System.nanoTime()
 )
 
 class SellingCars {
@@ -60,11 +63,20 @@ class SellingCars {
     fun findOldestOfType(make: String) {
         val temp: List<Car> = carLot.filter { it.make == make }
 
+
         if (temp.isEmpty()) {
             println("Car not found")
         } else {
             println(temp[0])
+//            carLot.remove(temp[0])
         }
+    }
+
+    fun findCoerce(brand: String) {
+        val oldestCar = carLot.filter { it.make == brand}
+
+
+        println("Oldest car of Type: $oldestCar")
     }
 
     fun showListOfMakes(make: String) {

@@ -3,6 +3,7 @@ package com.example.kotlincodechallenges
 import kotlin.system.measureNanoTime
 import kotlin.system.measureTimeMillis
 
+// String concat vs StringBuilder
 
 //Convertion:
 //[a,A]-> 4
@@ -21,16 +22,17 @@ fun main() {
     println(convertPhrase("Android is better that iOS"))
     println(dupsOrNaw("Andro     "))
 }
-
-val mem = Runtime.getRuntime()
-val memBefore = mem.totalMemory() - mem.freeMemory()
+//
+//val mem = Runtime.getRuntime()
+//val memBefore = mem.totalMemory() - mem.freeMemory()
+//val mem2 = Runtime.getRuntime()
+//val memBefore2 = mem2.totalMemory() - mem2.freeMemory()
 fun l33tC0d3(input: String) {
     println("Original: $input")
     var temp = ""
     val temp2 = StringBuilder()
     val time = measureNanoTime {
-
-        println("String+= Memory Used Before: $memBefore")
+//        println("String+= Memory Used Before: $memBefore")
         for (c in input) {
             temp += when (c) {
                 'A', 'a' -> '4'
@@ -42,18 +44,12 @@ fun l33tC0d3(input: String) {
                 else -> c
             }
         }
-        val memAfter = mem.totalMemory() - mem.freeMemory()
-        println("String+= Memory Used After: ${memAfter - memBefore}")
+//        val memAfter = mem.totalMemory() - mem.freeMemory()
+//        println("String+= Memory Used After: ${memAfter - memBefore}")
     }
 
-
-
-
-    val mem2 = Runtime.getRuntime()
-    val memBefore2 = mem2.totalMemory() - mem2.freeMemory()
     val time2 = measureNanoTime {
-
-        println("StringBuilder Memory Used Before: $memBefore2")
+//        println("StringBuilder Memory Used Before: $memBefore2")
         for (c in input) {
             temp2.append(
                 when (c) {
@@ -67,11 +63,11 @@ fun l33tC0d3(input: String) {
                 }
             )
         }
-        val memAfter2 = mem2.totalMemory() - mem2.freeMemory()
-        println("StringBuilder Memory Used After: ${memAfter2 - memBefore2}")
+//        val memAfter2 = mem2.totalMemory() - mem2.freeMemory()
+//        println("StringBuilder Memory Used After: ${memAfter2 - memBefore2}")
     }
     println("L337 5p34k: $temp")
-    println("Time: ${time}ns")
+    println("Time1: ${time}ns")
     println("Time2: ${time2}ns")
 }
 

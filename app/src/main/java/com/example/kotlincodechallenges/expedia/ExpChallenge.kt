@@ -42,8 +42,8 @@ fun main(){
     println(miniMaxSum(listOf(1,2,3,4,5)))
     println(miniMaxSum(listOf(1,7,2,3,4,5,6)))
     println(miniMaxSumArray(intArrayOf(1,2,3,4,5)))
-    println("From Ken ${miniMaxFromKen(intArrayOf(1,2,3,4,5))}")
-    println("From Ken ${miniMaxFromKen(intArrayOf(1,7,2,3,4,5,6))}")
+    println("From Ken-----\n${miniMaxFromKen(intArrayOf(1,2,3,4,5))}")
+    println("From Ken-----\n${miniMaxFromKen(intArrayOf(1,7,2,3,4,5,6))}")
 }
 
 fun miniMaxSum(input: List<Int>): String{

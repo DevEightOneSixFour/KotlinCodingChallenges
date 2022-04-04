@@ -1,61 +1,63 @@
-package com.example.kotlincodechallenges
+package com.example.kotlincodechallenges.kroger
 
 fun main() {
-    println(calculateChange(29.99,40.00))
+//    println(calculateChange(29.99,40.00))
+    println(calculateChange("10.99;15.00"))
 }
-fun calculateChange(price: Double, cash: Double): String {
+
+fun calculateChange(input: String): String {
+
+    val splitter = input.split(";")
+    val price = splitter[0].toDouble()
+    val cash = splitter[1].toDouble()
     val changeMap = mutableListOf<String>()
+    changeMap[0]
+    changeMap.get(0)
 
     if(cash == price) return "ZERO"
     if(cash < price) return "ERROR"
 
-    val numberArray = arrayOf("ONE", "TWO", "THREE")
-    var hundredCount = 0
-
     //Declare constant values
-    val hundredValue = 100
-    val fiftyValue = 50
-    val twentyValue = 20
-    val tenValue = 10
-    val fiveValue = 5
-    val dollarValue = 1
-    val halfDollarValue = 50
-    val quarterValue = 25
-    val dimeValue = 10
-    val nickelValue = 5
+    val hundredValue = 100.00
+    val fiftyValue = 50.00
+    val twentyValue = 20.00
+    val tenValue = 10.00
+    val fiveValue = 5.00
+    val dollarValue = 1.00
+    val halfDollarValue = .50
+    val quarterValue = .25
+    val dimeValue = .10
+    val nickelValue = .5
     val convertCoins = 100 //converts coin values to int
 
-    var change = 0.0 // change to be made
-
     //Compute Change to be made
-    change = cash - price
+    var change = cash - price
 
     //Determine change to be made
     while (change >= dollarValue) {
         when {
             change >= hundredValue -> {
-                change %= hundredValue.toDouble()
+                change %= hundredValue
                 changeMap.add("HUNDRED")
-                hundredCount++
             }
             change >= fiftyValue -> {
-                change %= fiftyValue.toDouble()
+                change %= fiftyValue
                 changeMap.add("FIFTY")
             }
             change >= twentyValue -> {
-                change %= twentyValue.toDouble()
+                change %= twentyValue
                 changeMap.add("TWENTY")
             }
             change >= tenValue -> {
-                change %= tenValue.toDouble()
+                change %= tenValue
                 changeMap.add("TEN")
             }
             change >= fiveValue -> {
-                change %= fiveValue.toDouble()
+                change %= fiveValue
                 changeMap.add("FIVE")
             }
             else -> {
-                change %= dollarValue.toDouble()
+                change %= dollarValue
                 changeMap.add("ONE")
             }
         }
@@ -65,23 +67,23 @@ fun calculateChange(price: Double, cash: Double): String {
 **in order to deal with the coins as integers.*/
     while (change != 0.0) {
         when {
-            change < 1 -> {
-                change = (change.toFloat() * convertCoins).toDouble()
-            }
+//            change < 1 -> {
+//                change = (change.toFloat() * convertCoins).toDouble()
+//            }
             change >= halfDollarValue -> {
-                change %= halfDollarValue.toDouble()
+                change %= halfDollarValue
                 changeMap.add("HALF DOLLAR")
             }
             change >= quarterValue -> {
-                change %= quarterValue.toDouble()
+                change %= quarterValue
                 changeMap.add("QUARTER")
             }
             change >= dimeValue -> {
-                change %= dimeValue.toDouble()
+                change %= dimeValue
                 changeMap.add("DIME")
             }
             change >= nickelValue -> {
-                change %= nickelValue.toDouble()
+                change %= nickelValue
                 changeMap.add("NICKEL")
             }
             else -> {
