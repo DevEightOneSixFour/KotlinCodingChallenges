@@ -13,9 +13,10 @@ package com.example.kotlincodechallenges.capitalone
 fun main() {
     val names = arrayOf("Amy", "Michael", "Bob", "Alice", "William", null)
     biggerThanThree(names)
+    testBiggerThanThree()
 }
 
-fun biggerThanThree(names: Array<String?>) {
+fun biggerThanThree(names: Array<String?>): Int {
     var result = 0
 
     for (s in names) {
@@ -27,6 +28,7 @@ fun biggerThanThree(names: Array<String?>) {
     }
 
     println("Length is $result")
+    return result
 }
 
 // Pregunta de codigo
@@ -35,13 +37,13 @@ fun biggerThanThree(names: Array<String?>) {
 //    return Gson.fromJson(this, userTypeToken)
 //}
 
-//fun testBiggerThanThree() {
-//    val testArray1 = arrayOf("Amy", "Michael", "Bob", "Alice", "William", null)
-//    val nullArray = arrayOf(null, null)
-//    val shortArray = arrayOf("Amy","Jay")
-//
-//    Truth.assertThat(biggerThanThree(testArray1)).equals(19)
-//    Truth.assertThat(biggerThanThree(nullArray)).equals(0)
-//    Truth.assertThat(biggerThanThree(shortArray)).equals(0)
-//
-//}
+fun testBiggerThanThree() {
+    val testArray1 = arrayOf("Amy", "Michael", "Bob", "Alice", "William", null)
+    val nullArray = arrayOf<String?>(null, null)
+    val shortArray = arrayOf<String?>("Amy","Jay")
+
+    println(biggerThanThree(testArray1) == 19)
+    println((biggerThanThree(nullArray)) == 0)
+    println((biggerThanThree(shortArray)) == 0)
+
+}
