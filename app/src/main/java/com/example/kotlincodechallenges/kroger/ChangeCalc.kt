@@ -11,8 +11,6 @@ fun calculateChange(input: String): String {
     val price = splitter[0].toDouble()
     val cash = splitter[1].toDouble()
     val changeMap = mutableListOf<String>()
-    changeMap[0]
-    changeMap.get(0)
 
     if(cash == price) return "ZERO"
     if(cash < price) return "ERROR"

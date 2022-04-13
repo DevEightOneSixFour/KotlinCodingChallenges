@@ -28,8 +28,6 @@ fun sumBitAndFromAnibal(arr: Array<Int>): Long {
 
 fun sumBitAnd(arr: Array<Int>): Long {
     var sum = 0L
-    val hashSet = mutableSetOf<Int>()
-
     /*
         0000 -> 0
         0001 -> 1
@@ -91,4 +89,27 @@ fun reverseWord(s: String): String {
         charArray[i] = s[len - i]
     }
     return charArray.joinToString("")
+}
+
+fun product_subarrays(arr: IntArray) {
+    var sum = 0L
+
+    for (i in arr.indices) {
+        for (j in i until arr.size) {
+            sum += arr[i] and arr[j]
+        }
+    }
+}
+
+fun productSubarrays(arr: IntArray) {
+    var sum = 0L
+    var index1 = 0
+    var index2 = 0
+
+    for (i in arr.indices) {
+        for (j in i until arr.size) {
+            sum += arr[i] and arr[j]
+        }
+
+    }
 }
