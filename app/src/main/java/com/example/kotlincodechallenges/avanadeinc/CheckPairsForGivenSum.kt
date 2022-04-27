@@ -11,9 +11,7 @@ fun checkPairsForGivenSum(array: IntArray, sumCheck: Int) {
     for (i in array) {
         // if a number in the array is greater than
         // the given sum, skip this number
-        if (i >= sumCheck) {
-            continue
-        } else if (pastNumbers.contains(i)) {
+        if (i >= sumCheck ||pastNumbers.contains(i)) {
             continue
         }
         for (j in array) {

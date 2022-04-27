@@ -1,5 +1,10 @@
 package com.example.kotlincodechallenges.capitalone
 
+import android.app.Person
+import android.view.View
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
 /* To execute Kotlin code, please define a top level function named main
  1. Declare an array with the values:  Amy, Michael, Bob, Alice, William.
 

@@ -3,6 +3,7 @@ package com.example.kotlincodechallenges
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 import java.io.File
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//        window.apply {
+//            setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+//            addFlags()
+//        }
 
         tvLoginText = findViewById(R.id.tv_login_text)
 

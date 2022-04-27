@@ -32,56 +32,46 @@ fun calculateChange(input: String): String {
     var change = cash - price
 
     //Determine change to be made
-    while (change >= dollarValue) {
+    while (change != 0.0) {
         when {
             change >= hundredValue -> {
-                change %= hundredValue
+                change -= hundredValue
                 changeMap.add("HUNDRED")
             }
             change >= fiftyValue -> {
-                change %= fiftyValue
+                change -= fiftyValue
                 changeMap.add("FIFTY")
             }
             change >= twentyValue -> {
-                change %= twentyValue
+                change -= twentyValue
                 changeMap.add("TWENTY")
             }
             change >= tenValue -> {
-                change %= tenValue
+                change -= tenValue
                 changeMap.add("TEN")
             }
             change >= fiveValue -> {
-                change %= fiveValue
+                change -= fiveValue
                 changeMap.add("FIVE")
             }
-            else -> {
-                change %= dollarValue
+            change >= dollarValue -> {
+                change -= dollarValue
                 changeMap.add("ONE")
             }
-        }
-    }
-
-    /*At this point, total change is multiplied by a constant
-**in order to deal with the coins as integers.*/
-    while (change != 0.0) {
-        when {
-//            change < 1 -> {
-//                change = (change.toFloat() * convertCoins).toDouble()
-//            }
             change >= halfDollarValue -> {
-                change %= halfDollarValue
+                change -= halfDollarValue
                 changeMap.add("HALF DOLLAR")
             }
             change >= quarterValue -> {
-                change %= quarterValue
+                change -= quarterValue
                 changeMap.add("QUARTER")
             }
             change >= dimeValue -> {
-                change %= dimeValue
+                change -= dimeValue
                 changeMap.add("DIME")
             }
             change >= nickelValue -> {
-                change %= nickelValue
+                change -= nickelValue
                 changeMap.add("NICKEL")
             }
             else -> {
@@ -90,6 +80,17 @@ fun calculateChange(input: String): String {
             }
         }
     }
+
+    /*At this point, total change is multiplied by a constant
+**in order to deal with the coins as integers.*/
+//    while (change != 0.0) {
+//        when {
+////            change < 1 -> {
+////                change = (change.toFloat() * convertCoins).toDouble()
+////            }
+//
+//        }
+//    }
 
     return changeMap.joinToString(",")
 }

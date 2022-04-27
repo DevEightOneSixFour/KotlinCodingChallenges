@@ -20,7 +20,7 @@ fun noMinOrMax(array: IntArray) {
             i > max -> max = i
         }
     }
-    list.run {
+    list.apply {
         remove(mini)
         remove(max)
     }

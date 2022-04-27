@@ -6,11 +6,14 @@ import kotlin.math.absoluteValue
 
 fun main() {
     println(closeToZero(listOf(1.1,123.0,-1.0,-2.2,2.1,9.0)))
+    println(closeToZero(listOf(122.0,123.0,-1.1,1.1, -2.2,2.1,9.0)))
+    println(zeroTooClose(listOf(1.1,123.0,-1.0,-2.2,2.1,9.0)))
     println(zeroTooClose(listOf(122.0,123.0,-1.1,1.1, -2.2,2.1,9.0)))
 }
 
 // with absoluteValue
 fun closeToZero(list: List<Double>) : Double {
+    println("---CloseToZero---")
 
     var result = Double.MAX_VALUE
 
@@ -24,6 +27,7 @@ fun closeToZero(list: List<Double>) : Double {
 
 // without absoluteValue
 fun zeroTooClose(list: List<Double>) : Double {
+    println("---ZeroTooClose---")
 
     var result = Double.MAX_VALUE
     var temp: Double
