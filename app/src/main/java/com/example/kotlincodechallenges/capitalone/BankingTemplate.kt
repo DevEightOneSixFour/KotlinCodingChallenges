@@ -11,11 +11,11 @@ package com.example.kotlincodechallenges.capitalone
  */
 fun main() {
     // Tester values
-    val bank = Banking(listOf(10,100,20,50,30))
+    val bank = Banking(listOf(10, 100, 20, 50, 30))
 
     // Example Values
-    bank.withdraw(1,10)
-    bank.transfer(4,0,20)
+    bank.withdraw(1, 10)
+    bank.transfer(4, 0, 20)
     bank.deposit(4, 20)
     bank.transfer(2, 3, 15)
 
@@ -33,7 +33,7 @@ class BankingTemplate(private val balances: List<Int>) {
         "from" Account id to transfer money from
         "to" Account id to transfer money to
         "sum" Amount of money to transfer
-        "return" if successful
+        "return" if transaction was successful
      */
     fun transfer(from: Int, to: Int, sum: Int): Boolean = TODO()
 

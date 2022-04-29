@@ -16,7 +16,3 @@ println(contactsDao.filterNames('y'))
 
  */
 //
-//@Entity
-//data class Contacts(
-//    val names : List<String>
-//)

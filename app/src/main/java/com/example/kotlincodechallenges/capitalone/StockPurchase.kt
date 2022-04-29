@@ -1,4 +1,5 @@
 package com.example.kotlincodechallenges.capitalone
+
 // AKA MaximumDifference
 fun main() {
     val prices = arrayOf(110, 102, 97, 103, 106)
@@ -15,7 +16,7 @@ fun main() {
             buyIndex = prices.indexOf(trackStock)
             sellIndex = i
         }
-        if (trackStock > prices[i]){
+        if (trackStock > prices[i]) {
             trackStock = prices[i]
         }
     }

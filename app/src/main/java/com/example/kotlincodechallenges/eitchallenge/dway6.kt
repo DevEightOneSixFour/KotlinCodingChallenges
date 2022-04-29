@@ -19,9 +19,11 @@ package com.example.kotlincodechallenges.eitchallenge
 // part 2
 fun main(){
     println(testString("aac"))
-    println(testString("abcdefghijklmnopqrstuvwxyz"))
+    println(testString(ALPHABET))
 }
 
 fun testString(str: String): Boolean {
     return str.length == str.chars().distinct().count().toInt()
 }
+
+const val ALPHABET = "abcdefghijklmnopqrstuvwxyz"
