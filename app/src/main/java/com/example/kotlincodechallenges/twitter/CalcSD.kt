@@ -9,8 +9,13 @@ fun main() {
     val SD = calculateSD(numArray)
     val sd = getSD(numList)
 
-    System.out.format("Standard Deviation = %.6f", SD)
-    System.out.format("Standard Deviation = %.6f", sd)
+//    System.out.format("Standard Deviation = %.6f", SD)
+//    println("")
+//    System.out.format("Standard Deviation = %.6f", sd)
+//    println("")
+
+    println("Standard Deviation = %.6f".format(SD))
+    println("Standard Deviation = %.6f".format(sd))
 }
 
 fun calculateSD(numArray: DoubleArray): Double {
