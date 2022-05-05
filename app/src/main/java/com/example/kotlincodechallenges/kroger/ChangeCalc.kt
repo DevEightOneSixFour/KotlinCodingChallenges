@@ -2,7 +2,8 @@ package com.example.kotlincodechallenges.kroger
 
 fun main() {
 //    println(calculateChange(29.99,40.00))
-    println(calculateChange("10.99;15.00"))
+    println(calculateChange("13.00;15.00"))
+
 }
 
 fun calculateChange(input: String): String {
@@ -32,7 +33,7 @@ fun calculateChange(input: String): String {
     var change = cash - price
 
     //Determine change to be made
-    while (change != 0.0) {
+    while (change >= 0.0) {
         when {
             change >= hundredValue -> {
                 change -= hundredValue

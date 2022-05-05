@@ -1,5 +1,6 @@
 package com.example.kotlincodechallenges.eitchallenge
 
+// fail
 //fun main(){
 //    println(testString("abba"))
 //    println(testString("abc"))
@@ -16,6 +17,7 @@ package com.example.kotlincodechallenges.eitchallenge
 //    return true
 //}
 
+// pass
 // part 2
 fun main(){
     println(testString("aac"))
@@ -25,5 +27,3 @@ fun main(){
 fun testString(str: String): Boolean {
     return str.length == str.chars().distinct().count().toInt()
 }
-
-const val ALPHABET = "abcdefghijklmnopqrstuvwxyz"

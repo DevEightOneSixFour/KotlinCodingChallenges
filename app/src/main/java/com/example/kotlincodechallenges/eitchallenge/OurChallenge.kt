@@ -6,11 +6,18 @@ Implement an algorithm to determine if a string has all unique characters
 "abba" = false
  */
 
+const val ALPHABET = "abcdefghijklmnopqrstuvwxyz" // true
+const val NONPHABET = "zazazazazazazazazazazaza" // false
+
 fun main() {
     println(areThereDuplicates("abc"))
     println(areThereDuplicates("abba"))
+    println(areThereDuplicates(ALPHABET))
+    println(areThereDuplicates(NONPHABET))
     println(hasDuplicates("abc".toList()))
     println(hasDuplicates("abba".toList()))
+    println(hasDuplicates(ALPHABET.toList()))
+    println(hasDuplicates(NONPHABET.toList()))
 }
 
 fun areThereDuplicates(str: String): String {
@@ -24,5 +31,5 @@ fun areThereDuplicates(str: String): String {
 }
 
 fun <T> hasDuplicates(array: List<T>): Boolean {
-    return array.size != array.distinct().count()
+    return array.size == array.distinct().count()
 }

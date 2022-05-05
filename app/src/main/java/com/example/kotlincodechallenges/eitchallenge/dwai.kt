@@ -1,8 +1,9 @@
-package com.example.kotlincodechallenges
+package com.example.kotlincodechallenges.eitchallenge
 
+// fail
 fun main() {
 
-    if(isStringHasUniqe("abba")){
+    if(isStringHasUniqe("abc")){
         print("true")
     }else{
 

@@ -4,7 +4,7 @@ package com.example.kotlincodechallenges.wellsfargo
 //    for removing similar repeated characters with alternate case
 //   Example ->   aAbBcC  -  “”
 //                abcCde  - abde
-//                AbbCdDe -> Abbce
+//                AbbCdDe -> AbbCe
 
 fun main() {
 

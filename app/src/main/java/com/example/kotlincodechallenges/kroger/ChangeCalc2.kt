@@ -80,7 +80,24 @@ class CashRegister {
 
 fun main() {
 
-    val input = "10.99;15.00"
+    /*
+    100 = "ONE HUNDRED"
+    50 = "FIFTY"
+    20
+    10
+    5
+    2
+    1
+    .50
+    .25
+    .10
+    .05
+    .01
+     */
+
+
+    val input = "10.99;200.50"
+    val fromTest = "15.94;16.00"
 
     val arr = input.split(";")
     val price = arr[0].toDouble()

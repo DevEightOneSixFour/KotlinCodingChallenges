@@ -1,5 +1,6 @@
 package com.example.kotlincodechallenges.eitchallenge
 
+// pass
 fun main() {
     val result1 = checkAllUnique(input = "abc")
     val result2 = checkAllUnique(input = "abba")

@@ -1,5 +1,6 @@
 package com.example.kotlincodechallenges.eitchallenge
 
+// fail
 var value: String = ""
 fun main() {
     value = "abba"

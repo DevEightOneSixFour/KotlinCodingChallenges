@@ -1,5 +1,6 @@
 package com.example.kotlincodechallenges.eitchallenge
 
+// fail
 fun main() {
     println(identifyUniqueCharacter("abc")) // true
     println(identifyUniqueCharacter("abba")) // false
