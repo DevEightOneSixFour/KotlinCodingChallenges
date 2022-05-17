@@ -1,9 +1,9 @@
 package com.example.kotlincodechallenges.allyfinancial
 
 val board = arrayOf(
-    arrayOf('X', 'X', 'X'),
-    arrayOf('O', 'O', ' '),
-    arrayOf('X', 'O', ' ')
+    arrayOf(' ', ' ', ' '),
+    arrayOf(' ', ' ', ' '),
+    arrayOf(' ', ' ', ' ')
 )
 fun main() {
     val x = 'X'
