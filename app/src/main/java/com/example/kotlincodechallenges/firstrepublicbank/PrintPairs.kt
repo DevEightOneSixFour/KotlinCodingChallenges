@@ -1,4 +1,4 @@
-package com.example.kotlincodechallenges.frb
+package com.example.kotlincodechallenges.firstrepublicbank
 
 fun main() {
     val array = intArrayOf(1,2,3,4,5)
