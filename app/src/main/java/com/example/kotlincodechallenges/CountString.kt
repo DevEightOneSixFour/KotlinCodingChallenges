@@ -28,3 +28,45 @@ fun countString(str: String) {
     println("Time: ${time}ms")
 
 }
+
+//fun main() {
+//    println(countStrings(arrayOf("arrow", null, "computer", "nice")))
+//    println(countStringsAli(arrayOf("arrow", "computer", "nice")))
+//
+//}
+//
+//fun countStringsAli(list: Array<String?>):MutableList<String>{
+//    val mutableList= list.filter {it.length >= 5}
+//
+//    if (mutableList.size>0){
+//        return mutableList as MutableList<String>
+//    }else return mutableListOf("There are not strings with 5 or more characters")
+//
+//
+//}
+//
+//fun countStrings(list: Array<String?>?):MutableList<String>{
+//
+//    val mutableList= mutableListOf<String>()
+//
+//    // if empty Array, return empty list
+//    if(list?.isEmpty() == true || list == null) {
+//        return mutableListOf("Empty List")
+//    }
+//
+//    for(n in list){
+//        // if current n is null
+//        if(n == null) {
+//            continue
+//        } else {
+//            val count = n.count()
+//            if (count >= 5){
+//                mutableList.add(n)
+//            }
+//        }
+//    }
+//    if (mutableList.size>0){
+//        return mutableList
+//    }else return mutableListOf("There are not strings with 5 or more characters")
+//
+//}

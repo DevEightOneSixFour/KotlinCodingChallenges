@@ -2,7 +2,7 @@ package com.example.kotlincodechallenges.kroger
 
 fun main() {
 //    println(calculateChange(29.99,40.00))
-    println(calculateChange("13.00;15.00"))
+    println(calculateChange("13.00;7.00"))
 
 }
 
@@ -22,15 +22,16 @@ fun calculateChange(input: String): String {
     val twentyValue = 20.00
     val tenValue = 10.00
     val fiveValue = 5.00
+    val twoValue = 2.00
     val dollarValue = 1.00
     val halfDollarValue = .50
     val quarterValue = .25
     val dimeValue = .10
-    val nickelValue = .5
+    val nickelValue = .05
     val convertCoins = 100 //converts coin values to int
 
     //Compute Change to be made
-    var change = cash - price
+    var change = cash - price // 2
 
     //Determine change to be made
     while (change >= 0.0) {
@@ -54,6 +55,10 @@ fun calculateChange(input: String): String {
             change >= fiveValue -> {
                 change -= fiveValue
                 changeMap.add("FIVE")
+            }
+            change >= twoValue -> {
+                change -= twoValue
+                changeMap.add("TWO")
             }
             change >= dollarValue -> {
                 change -= dollarValue
