@@ -10,6 +10,8 @@ fun main() {
 fun countString(str: String) {
 
     val newMap = HashMap<Char,Int>()
+    val names = listOf(Names(1, "String"), Names(2, "Bean"))
+    println(names)
 
     println(str)
     val time = measureTimeMillis {
@@ -28,6 +30,12 @@ fun countString(str: String) {
     println("Time: ${time}ms")
 
 }
+
+data class Names(
+    val id: Int,
+    val value: String
+)
+
 
 //fun main() {
 //    println(countStrings(arrayOf("arrow", null, "computer", "nice")))

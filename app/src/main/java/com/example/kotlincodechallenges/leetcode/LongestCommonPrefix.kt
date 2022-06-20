@@ -26,8 +26,8 @@ fun main() {
     val strs2 = arrayOf("dog","racecar","car")
 //    leastCommonPrefix(strs)
 //    leastCommonPrefix(strs2)
-    println(longestCommonPrefix(strs))
-    println(longestCommonPrefix(strs2))
+    println(longestCommonPrefixJavaed(strs))
+    println(longestCommonPrefixJavaed(strs2))
 }
 
 //fun leastCommonPrefix(array: Array<String>) {
@@ -65,4 +65,14 @@ fun longestCommonPrefix(strs: Array<String>): String {
     }
 
     return first.substring(0, commonPrefixCount)
+}
+fun longestCommonPrefixJavaed(strs: Array<String>): String? {
+    if (strs.isEmpty()) return ""
+    var prefix = strs[0]
+    for (i in 1 until strs.size) {
+        while (strs[i].indexOf(prefix) != 0) {
+            prefix = prefix.substring(0, prefix.length - 1)
+        }
+    }
+    return prefix
 }

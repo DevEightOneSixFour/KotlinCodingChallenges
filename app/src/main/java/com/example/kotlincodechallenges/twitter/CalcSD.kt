@@ -43,11 +43,11 @@ fun getSD(list: List<Float>): Float {
         sum += i
     }
 
-    val mean = sum / 10
+    val mean = sum / list.size
 
     for (j in list) {
         sd += (j - mean).pow(2.0)
     }
 
-    return sqrt(sd / 10).toFloat()
+    return sqrt(sd / list.size).toFloat()
 }

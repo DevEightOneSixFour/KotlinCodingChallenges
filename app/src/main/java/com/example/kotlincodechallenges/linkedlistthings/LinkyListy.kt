@@ -26,6 +26,8 @@ fun main() {
 fun calculateGrad() {
     val grad = (2.0/10.0) * 100.00
 
+    val student = Student("name",123)
+    println(student)
     println("Grade: $grad%")
 }
 
@@ -37,7 +39,9 @@ class Student(var name: String) {
 
     // var is not allowed in a Secondary constructor
     // this(sectionName) needs the ':' before it
-    constructor(sectionName: String, id: Int) : this(sectionName) {}
+    constructor(sectionName: String, id: Int) : this(sectionName) {
+        println("SectionName: $sectionName $id " )
+    }
 }
 
 /*

@@ -1,5 +1,7 @@
 package com.example.kotlincodechallenges.jpmc
 
+import retrofit2.http.Query
+
 /*
 
 // step 1
@@ -23,15 +25,28 @@ println(contactsDao.filterNames('y'))
 // munchkin
 // Moss
 
+//
+//@Entity
+//data class Contact(
+//    val names: List<Name>
+//)
+//
+//@Entity
+//data class Name (val id: Int, val value: String)
+//
 //@Dao
 //class ContactsDao {
 //    // gets all Names by the given 'letter'
 //    @Query("select NAME from CONTACTS where NAME like ‘$letter%’")
-//    fun getNamesByLetter(letter: Char): List<String>
+//    fun getNamesByGivenLetter(letter: Char): List<Name>
+//
+//
 //}
 //
-//val dao = ContactsDao()
+//class ShowDatabaseData {
+//    val dao = ContactsDao()
 //
-//val filterNames = dao.getNamesByLetter('m')
+//    val listOfNames = dao.getNamesByGivenLetter('a')
 //
-//println(filterNames)
+//    println(listOfNames)
+//}

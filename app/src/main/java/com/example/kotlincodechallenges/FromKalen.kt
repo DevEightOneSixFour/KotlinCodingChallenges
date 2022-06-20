@@ -4,8 +4,8 @@ fun main() {
     //println(descrambler("cdabfefacce"))
     println(sumBitAnd(arrayOf(1, 2, 3)))
     println(sumBitAndFromAnibal(arrayOf(1,2,3)))
-    //println(reverseWord("abcde"))
-//    println(reverseSentence("What did I tell you about coding you dope"))
+    println(reverseWord("abcde"))
+    println(reverseSentence("What did I tell you about coding you dope"))
     println(moveZerosToBack(intArrayOf(0, 0, 1, 2, 0, 5, 0, 1, 1, 0, 5)))
 }
 
