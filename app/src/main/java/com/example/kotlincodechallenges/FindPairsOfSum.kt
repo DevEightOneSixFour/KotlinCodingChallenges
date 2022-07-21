@@ -13,7 +13,7 @@ fun findPairsOfSum(nums: IntArray, target: Int) {
 
     for (i in nums.indices) {
 
-        // check if pair (nums[i[, target - nums[i] exists
+        // check if pair (nums[i], target - nums[i]) exists
         // if the difference is seen before, print the pair
          if (map.containsKey(target - nums[i]) && map.containsKey(nums[i])) {
             // so later duplicate pairs are not shown

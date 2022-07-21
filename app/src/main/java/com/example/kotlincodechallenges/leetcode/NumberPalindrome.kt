@@ -1,9 +1,17 @@
 package com.example.kotlincodechallenges.leetcode
 
 fun main() {
-    println(stringPalindrome("helleh"))
+//    println(stringPalindrome("helleh"))
     println(numberPalindrome(1032101))
+//    println(kotlinPalindrome("helleh"))
+    println(actualNumberPalindrome(1032101))
+    println(actualNumberPalindrome(102201))
 }
+
+// target 10
+// 1,2,3,4,5,6,7,8
+
+fun kotlinPalindrome(string: String): Boolean = string == string.reversed()
 
 fun stringPalindrome(string: String): Boolean {
 
@@ -43,5 +51,22 @@ fun numberPalindrome(int: Int): Boolean {
         i++
         j--
     }
+    return true
+}
+
+fun actualNumberPalindrome(num: Int): Boolean {
+
+    var tempNum = num
+    var reverseNumber = 0
+    var remainder : Int
+
+    while (tempNum != 0) {
+        remainder = tempNum % 10
+        reverseNumber = reverseNumber * 10 + remainder
+        tempNum /= 10
+    }
+
+    if (num != reverseNumber) return false
+
     return true
 }

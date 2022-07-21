@@ -38,15 +38,23 @@ println(contactsDao.filterNames('y'))
 //class ContactsDao {
 //    // gets all Names by the given 'letter'
 //    @Query("select NAME from CONTACTS where NAME like ‘$letter%’")
-//    fun getNamesByGivenLetter(letter: Char): List<Name>
+//    fun getNamesByLetter(letter: Char): List<String>
 //
 //
 //}
 //
-//class ShowDatabaseData {
+//class ShowNames {
 //    val dao = ContactsDao()
 //
-//    val listOfNames = dao.getNamesByGivenLetter('a')
+//    val listOfNames = dao.getNamesByLetter('j')
 //
 //    println(listOfNames)
+//}
+//
+//fun displayNames(letter: Char): List<String> {
+//    val listToDisplay = mutableListOf<String>()
+//    val database = OurDatabase()
+//    val query = "SELECT NAME FROM CONTACTS WHERE NAME LIKE '$letter'"
+//    val queryResult = database.rawQuery(query,null)
+//    while(queryResult.moveToFirst)
 //}

@@ -28,3 +28,9 @@ class SecondExample: ConstructorExample {
     constructor(int:Int): super(int)
 
 }
+
+//class ConstructorExample2(a: Int, b: Int) {
+//    var c = a + b
+//
+//    constructor()
+//}

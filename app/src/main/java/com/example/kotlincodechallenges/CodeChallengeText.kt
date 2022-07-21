@@ -18,7 +18,7 @@ import java.util.*
 
 fun main(){
 val strin: String? = "askdjhaskdjha"
-    strin?.replace(strin?.get(0), '4')
+    strin?.replace(strin[0], '4')
 
     val newStrin = strin ?: "newString"
 }
@@ -30,12 +30,15 @@ fun Boolean.toBinary() = when {
 
 fun Boolean.toBinary2() = if(this) 1 else 0
 
+// group of related constants
 enum class DaysOfTheWeek {
     MON,
     TUES,
     WED
 }
 
+// group of related classes
+// hold states of the app -> UIState
 sealed class WeekDays
      data class MON(val firstDay: String): WeekDays()
      data class Tues(val bunber: Int): WeekDays()

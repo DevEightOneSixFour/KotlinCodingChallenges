@@ -35,6 +35,14 @@ fun main() {
     val intArray2 = intArrayOf(3,2,4)
     val intArray3 = intArrayOf(3, 3)
 
+//    println(twoSum(intArray1, 9))
+//    println(twoSum(intArray2, 6))
+//    println(twoSum(intArray3, 6))
+    //
+    println(twoSum2(intArray1, 9))
+    println(twoSum2(intArray2, 6))
+    println(twoSum2(intArray3, 6))
+    //
     println(twoSum3(intArray1, 9))
     println(twoSum3(intArray2, 6))
     println(twoSum3(intArray3, 6))

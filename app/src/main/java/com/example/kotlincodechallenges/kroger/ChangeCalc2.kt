@@ -1,12 +1,18 @@
 package com.example.kotlincodechallenges.kroger
 
+import java.math.RoundingMode
+
+fun Double.roundThis(): Double {
+    return this.toBigDecimal().setScale(2, RoundingMode.HALF_DOWN).toDouble()
+}
+
 class CashRegister {
     fun calculateChange(price: Double, cash: Double): String {
 
         if (price > cash) return "ERROR"
         if (price == cash) return "ZERO"
 
-        var change = cash - price
+        var change = (cash - price).roundThis()
         println("Change: $change")
         val changeString = StringBuilder()
 
@@ -83,23 +89,23 @@ fun main() {
     /*
     100 = "ONE HUNDRED"
     50 = "FIFTY"
-    20
+    20 = "TWENTY"
     10
     5
     2
     1
     .50
     .25
-    .10
-    .05
-    .01
+    .10 = "DIME"
+    .05 = "NICKEL"
+    .01 = "PENNY"
      */
 
 
     val input = "10.99;200.50"
     val fromTest = "15.94;16.00"
 
-    val arr = input.split(";")
+    val arr = fromTest.split(";")
     val price = arr[0].toDouble()
     val cash = arr[1].toDouble()
 
